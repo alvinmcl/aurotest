@@ -1,11 +1,14 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import questionOneRouter from './routes/questionOneRoutes.js';
 
 dotenv.config();
 
 const app = express();
 
 app.use(express.json());
+
+app.use('/api/Q1', questionOneRouter);
 
 const port = process.env.PORT || 5000;
 
