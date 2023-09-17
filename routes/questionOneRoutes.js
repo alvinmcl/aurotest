@@ -22,7 +22,7 @@ function fizzbuzzCounter(nValue) {
 questionOneRouter.get(
   '/:n',
   expressAsyncHandler(async (req, res) => {
-    const paramNValue = req.params.n; // Replace 'paramName' with the name of your parameter
+    const paramNValue = req.params.n;
     const validNValue = /^[1-9]\d*$/.test(paramNValue);
 
     if (validNValue) {
