@@ -14,10 +14,6 @@ app.use('/api/Q2', questionTwoRouter);
 
 const port = process.env.PORT || 5000;
 
-app.get('/', function (req, res) {
-  res.send('testing');
-});
-
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
